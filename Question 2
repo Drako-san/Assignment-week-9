@@ -1,0 +1,20 @@
+import math
+class circle():
+    def __init__(self,radius,colour):
+        self.radius = radius
+        self.colour = colour
+    def getradius(self):
+        return self.radius
+    def getcolour(self):
+        return self.colour
+    def area(self):
+        return (self.radius**2) * math.pi
+    pass
+class cylinder(circle):
+    def __init__(self,height):
+        self.height = height
+    def getheight(self):
+        return self.height
+    def volume(self):
+        return self.area * self.height
+    pass
