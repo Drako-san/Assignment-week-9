@@ -1,0 +1,25 @@
+class person():
+    def __init__(self,name,adress,course,numcourse):
+        self.name = name
+        self.adress = adress
+        self.course = course
+        self.numcourse = numcourse
+    pass
+class student(person):
+    def __init__(self,grade):
+        self.grade = grade
+    def average(self):
+        return (self.grade)/(self.numcourse)
+    pass
+class teacher(person):
+    courses = []
+    def addcourse(self,courses):
+        if self.course() not in courses:
+            courses.append(self.course())
+        else:
+            print("course already exist")
+    def removecourse(self,courses):
+        if self.course() in courses:
+            courses.remove(self.course())
+        else:
+            print("course doesn't exist")
